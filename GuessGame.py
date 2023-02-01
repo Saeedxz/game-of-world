@@ -1,4 +1,6 @@
 import random
+from Score import add_score
+
 
 def generate_number(difficulty):
     random_number = int(random.randint(1, difficulty))
@@ -20,6 +22,7 @@ def play(difficulty):
     input_number = get_guess_from_user(difficulty)
     if compare_results(random_number, input_number) == True:
         print("you won")
+        add_score(difficulty)
         return True
     else:
         print("you lost")

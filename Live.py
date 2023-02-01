@@ -23,9 +23,9 @@ def load_game():
             print("Error: Please enter just numbers !")
             continue
         if game_number == 1:
-            GuessGame.play(difficulty)
-        if game_number == 2:
             MemoryGame.play(difficulty)
+        if game_number == 2:
+            GuessGame.play(difficulty)
         if game_number == 3:
             CurrencyRouletteGame.play(difficulty)
         return difficulty, game_number

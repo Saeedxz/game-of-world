@@ -1,7 +1,8 @@
 import random
 import time
 import os
-
+from Utils import Screen_cleaner
+from Score import add_score
 
 def generate_sequence(difficulty):
     random_list = []
@@ -9,8 +10,7 @@ def generate_sequence(difficulty):
         random_list.append(int(random.randint(1, 101)))
     print(random_list)
     time.sleep(0.7)
-    # os.system('clear')    # if I use this command I cant type in the console (input)
-    print("\n" * 100)
+    Screen_cleaner()
     return random_list
 
 def get_list_from_user(difficulty):
@@ -33,6 +33,7 @@ def play(difficulty):
     user_numbers = get_list_from_user(difficulty)
     if is_list_equal(random_list, user_numbers):
         print("yes")
+        add_score(difficulty)
         return True
     else:
         print("no")

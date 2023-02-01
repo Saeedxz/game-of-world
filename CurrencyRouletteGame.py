@@ -1,5 +1,7 @@
 import random
 from currency_converter import CurrencyConverter
+from Score import add_score
+
 
 def get_money_interval(d,t):
     return (t - (5 - d), t + (5 - d))
