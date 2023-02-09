@@ -28,7 +28,7 @@ pipeline {
                             sh 'python e2e.py'
                             echo "Test PASSED"
                         }
-                        except (e) {
+                        catch (e) {
                             echo "Test FAILED"
                         } 
                     }
