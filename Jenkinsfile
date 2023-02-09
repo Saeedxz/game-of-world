@@ -37,7 +37,7 @@ pipeline {
         }
         stage('Push Image To Docker Hub'){
             steps{
-
+                echo "docker push <hub-user>/<repo-name>:<tag>"
             }
         }
         stage('Terminate Container'){
