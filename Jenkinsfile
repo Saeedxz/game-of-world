@@ -23,7 +23,7 @@ pipeline {
             steps {
                     script {
                         try{
-                            sh 'pip install -r Utils\\requirements.txt'
+                            sh 'pip install -r requirements.txt'
                             sh 'python e2e.py'
                             echo "Test PASSED"
                         }
