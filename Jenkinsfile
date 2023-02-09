@@ -24,13 +24,20 @@ pipeline {
                     script {
                         try{
                             sh 'pip install -r requirements.txt'
-                            sh 'python3 e2e.py'
+                            sh 'python3 tests/e2e.py'
                             echo "Test PASSED"
                         }
                         catch (e) {
                             echo "Test FAILED"
+                            currentBuild.result = "FAILURE"
+                            currentStage.result = "FAILURE"
                         } 
                     }
+            }
+        }
+        stage('Push Image To Docker Hub'){
+            steps{
+
             }
         }
         stage('Terminate Container'){
