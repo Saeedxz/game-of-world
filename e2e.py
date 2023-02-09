@@ -27,10 +27,10 @@ def main_function():
             print("0")
             exit(0)
         else:
-            print("-1")
-            exit(-1)
+            print("1")
+            exit(1)
     else:
-        print("-1")
-        exit(-1)
+        print("1")
+        exit(1)
 main_function()
 # print(int(score))
