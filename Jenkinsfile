@@ -24,7 +24,7 @@ pipeline {
                     script {
                         try{
                             sh 'pip install -r requirements.txt'
-                            sh 'python e2e.py'
+                            sh 'python3 e2e.py'
                             echo "Test PASSED"
                         }
                         catch (e) {
